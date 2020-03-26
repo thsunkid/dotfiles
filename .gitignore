@@ -1,0 +1,6 @@
+# personal files
+zsh/.zsh_history
+vim/config.vim
+vim/plugin.vim
+zsh/.oh-my-zsh/custom
+zsh/.oh-my-zsh/cache
