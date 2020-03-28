@@ -31,5 +31,6 @@ pip install wandb==0.8.30
 cp /vinai/thunm15/per-project/modfiles/eval.py /home/ubuntu/.local/lib/python3.7/site-packages/pycocoevalcap/ #d:45 
 cp /vinai/thunm15/per-project/modfiles/file_pusher.py /home/ubuntu/.local/lib/python3.7/site-packages/wandb/ #a:78
 cp /vinai/thunm15/per-project/modfiles/run_manager.py /home/ubuntu/.local/lib/python3.7/site-packages/wandb/ #d:1438,1439
+cp /vinai/thunm15/per-project/modfiles/tokenization_utils.py /home/ubuntu/.local/lib/python3.7/site-packages/pytorch_transformers/ #r:819, a:725
 
 
