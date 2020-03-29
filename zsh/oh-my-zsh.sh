@@ -276,14 +276,14 @@ main() {
 		p.p.s. Get stickers, shirts, and coffee mugs at https://shop.planetargon.com/collections/oh-my-zsh
 
 	EOF
-	printf "$RESET"
-
-	if [ $RUNZSH = no ]; then
-		echo "${YELLOW}Run zsh to try it out.${RESET}"
-		exit
-	fi
-
-	exec zsh -l
+#	printf "$RESET"
+#
+#	if [ $RUNZSH = no ]; then
+#		echo "${YELLOW}Run zsh to try it out.${RESET}"
+#		exit
+#	fi
+#
+#	exec zsh -l
 }
 
 main "$@"

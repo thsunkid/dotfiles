@@ -17,8 +17,13 @@ git clone https://github.com/thesunkid19/dotfiles.git $HOME/.dotfiles
 ```
 cd $HOME/.dotfiles; sh launch.sh
 ```
-
-
+---
+### Other features
+**Notify new files in a specified folder & automatically move them to a permanent place.**
+```
+sh check_me.sh $SOURCE_FOLDER $PERMANENT_FOLDER # sh check_me.sh runs/ /home/thunm15/ 
+``` 
+See the log at `$PERMANENT_FOLDER\log.txt` 
 
 
 
