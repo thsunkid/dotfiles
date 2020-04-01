@@ -1,8 +1,11 @@
-git clone https://github.com/thesunkid19/conditional-transfer-GPT2.git ~/ &&
+git clone https://github.com/thesunkid19/conditional-transfer-GPT2.git ~/conditional-transfer-GPT2&&
 cd ~/conditional-transfer-GPT2/ &&
 
+# copy tensorflow package from isilon instead of downloading it, cuz the Internet is so slowww
+cp /vinai/thunm15/py-packages/tensorflow_gpu-2.1.0-cp37-cp37m-manylinux2010_x86_64.whl ~/conditional-transfer-GPT2/
 # install requirement packages
 pip install -r requirements.txt &&
+pip install ipython # I love it
 
 # copy required files from isilon
 cp /vinai/thunm15/thunm15/project/ParlAI/data/pcap_jsons.zip . &&
@@ -12,11 +15,11 @@ rsync --info=progress2 -r /vinai/thunm15/thunm15/project/transfer-learning-conv-
 rsync --info=progress2 -r /vinai/thunm15/per-project/resnext_att.zip . &&
 
 # unzip and delete zip files
-unzip pcap_jsons.zip; rm pcap_jsons.zip &&
-unzip GPT2Tokenizer.zip; rm GPT2Tokenizer.zip &&
-unzip gpt2-medium.zip; rm gpt2-medium.zip &&
-unzip gpt2.zip; rm gpt2.zip &&
-unzip resnext_att.zip; rm resnext_att.zip &&
+unzip pcap_jsons.zip && rm pcap_jsons.zip &&
+unzip GPT2Tokenizer.zip && rm GPT2Tokenizer.zip &&
+unzip gpt2-medium.zip && rm gpt2-medium.zip &&
+unzip gpt2.zip && rm gpt2.zip &&
+unzip resnext_att.zip && rm resnext_att.zip &&
 
 # coco-evaluation & wandb setups
 sudo apt update &&

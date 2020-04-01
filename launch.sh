@@ -1,7 +1,7 @@
 # Launch Ubuntu's package installation
-python ubuntu/apt.py &&
+python3.7 ubuntu/apt.py &&
 # Launch Git config
-python git/gitconfig.py &&
+python3.7 git/gitconfig.py &&
 # Launch Vim & zsh's setup
 sh vimzsh.sh &&
 # Launch the project

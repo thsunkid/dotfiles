@@ -52,6 +52,7 @@ if sys.version_info > (3, 0):
 else:
     prompt = raw_input
 
+print("Generate github personal access token: https://github.com/settings/tokens/403274112")
 name = prompt('Your Name: ')
 email = prompt('Your Email: ')
 github_username = prompt('GitHub Username: ')
