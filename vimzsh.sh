@@ -8,4 +8,4 @@ cp ~/.dotfiles/vim/.vimrc ~/ &&
 cp /vinai/thunm15/thunm15/.zsh_history ~/ &&
 cp -r /vinai/thunm15/thunm15/.oh-my-zsh/custom.zip ~/.oh-my-zsh/ &&
 unzip ~/.oh-my-zsh/custom.zip -d ~/.oh-my-zsh/; rm ~/.oh-my-zsh/custom.zip &&
-zsh
+sudo chsh -s $(which zsh)
