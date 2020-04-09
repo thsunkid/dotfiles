@@ -2,10 +2,11 @@ git clone https://github.com/thesunkid19/conditional-transfer-GPT2.git ~/conditi
 cd ~/conditional-transfer-GPT2/ &&
 
 # copy tensorflow package from isilon instead of downloading it, cuz the Internet is so slowww
-cp /vinai/thunm15/py-packages/tensorflow_gpu-2.1.0-cp37-cp37m-manylinux2010_x86_64.whl ~/
+cp /vinai/thunm15/py-packages/tensorflow_gpu-2.1.0-cp37-cp37m-manylinux2010_x86_64.whl ~/ &&
 # install requirement packages
+pip install ~/tensorflow_gpu-2.1.0-cp37-cp37m-manylinux2010_x86_64.whl && # for tensorboardX
 pip install -r requirements.txt &&
-pip install ipython # I love it
+pip install ipython && # I love it
 
 # copy required files from isilon
 cp /vinai/thunm15/thunm15/project/ParlAI/data/pcap_jsons.zip . &&
