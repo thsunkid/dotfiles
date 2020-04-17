@@ -2,6 +2,7 @@ cd ~/conditional-transfer-GPT2/ &&
 
 # copy tensorflow package from isilon instead of downloading it, cuz the Internet is so slowww
 # install requirement packages
+cp /vinai/thunm15/py-packages/tensorflow_gpu-2.1.0-cp37-cp37m-manylinux2010_x86_64.whl ~/ &&
 pip install ~/tensorflow_gpu-2.1.0-cp37-cp37m-manylinux2010_x86_64.whl && # for tensorboardX
 pip install ipython && # I love it
 
