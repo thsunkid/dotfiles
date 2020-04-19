@@ -24,7 +24,8 @@ sudo apt-get install default-jre &&
 pip install --upgrade cython &&
 pip install git+https://github.com/salaniz/pycocoevalcap &&
 pip install matplotlib &&
-git clone https://github.com/ruotianluo/cider.git
+git clone https://github.com/ruotianluo/cider.git &&
+cp /vinai/thunm15/per-project/modfiles/bleu* ~/conditional-transfer-GPT2/cider/pyciderevalcap/ciderD/ &&
 cp -r /vinai/thunm15/thunm15/project/self-critical.pytorch/coco-caption/pycocoevalcap/spice/lib/stanford-corenlp-3.6.0* /home/ubuntu/.local/lib/python3.7/site-packages/pycocoevalcap/spice/lib/ &&
 pip install wandb==0.8.30 &&
 
