@@ -11,12 +11,14 @@ pip install -r requirements.txt &&
 # copy required files from isilon
 cp /vinai/thunm15/thunm15/project/ParlAI/data/pcap_jsons.zip . &&
 cp /vinai/thunm15/thunm15/project/transfer-learning-conv-ai/GPT2Tokenizer.zip . &&
+cp /vinai/thunm15/thunm15/project/transfer-learning-conv-ai/runs/Apr09_18-46-35_runs.zip . &&
 rsync --info=progress2 -r /vinai/thunm15/thunm15/project/transfer-learning-conv-ai/distilgpt2.zip . &&
-rsync --info=progress2 -r /vinai/thunm15/thunm15/project/transfer-learning-conv-ai/gpt2.zip . &&
-
+rsync --info=progress2 -r  /vinai/thunm15/per-project/resnext_att.zip . &&
 # unzip and delete zip files
+unzip resnext_att.zip && rm resnext_att.zip &&
 unzip pcap_jsons.zip && rm pcap_jsons.zip &&
 unzip GPT2Tokenizer.zip && rm GPT2Tokenizer.zip &&
+unzip Apr09_18-46-35_runs.zip && rm Apr09_18-46-35_runs.zip &&
 
 # coco-evaluation & wandb setups
 sudo apt update &&
