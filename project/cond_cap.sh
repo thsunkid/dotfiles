@@ -1,4 +1,4 @@
-git clone https://github.com/thesunkid19/conditional-transfer-GPT2.git ~/conditional-transfer-GPT2&&
+git clone https://github.com/thsunkid/conditional-transfer-GPT2.git ~/conditional-transfer-GPT2&&
 cd ~/conditional-transfer-GPT2/ &&
 
 # copy tensorflow package from isilon instead of downloading it, cuz the Internet is so slowww

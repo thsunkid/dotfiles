@@ -9,7 +9,7 @@ This setup includes:
 --- 
 ### Download this script
 ```
-git clone https://github.com/thesunkid19/dotfiles.git $HOME/.dotfiles
+git clone https://github.com/thsunkid/dotfiles.git $HOME/.dotfiles
 ```
 
 ---
