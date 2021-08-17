@@ -1,11 +1,16 @@
 # Install oh-my-zsh 
 sh ~/.dotfiles/zsh/oh-my-zsh.sh &&
 
-# Setup vim config + zsh's plugins.
+# Install Vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
+
+# Setup vim config.
 cp ~/.dotfiles/zsh/.zshrc ~/ &&
 cp -r ~/.dotfiles/vim/.vim ~/ &&
 cp ~/.dotfiles/vim/.vimrc ~/ &&
-cp /vinai/thunm15/thunm15/.zsh_history ~/ &&
-cp -r /vinai/thunm15/thunm15/.oh-my-zsh/custom.zip ~/.oh-my-zsh/ &&
-unzip ~/.oh-my-zsh/custom.zip -d ~/.oh-my-zsh/; rm ~/.oh-my-zsh/custom.zip &&
-sudo chsh -s $(which zsh)
+
+#set zsh as default shell
+sudo chsh -s $(which zsh) &&
+echo "zsh" >> .bashrc &&
+zsh

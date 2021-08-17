@@ -52,11 +52,29 @@ if sys.version_info > (3, 0):
 else:
     prompt = raw_input
 
-print("Generate github personal access token: https://github.com/settings/tokens/403274112")
-name = prompt('Your Name: ')
-email = prompt('Your Email: ')
-github_username = prompt('GitHub Username: ')
-token = prompt('GitHub API Token: ')
+# colorize text
+class colors:
+    """ ANSI color codes """
+    INFO = '\033[0;37;42m'
+    LINK = '\x1B[32;40m'
+    END = "\033[0m"
+    # cancel SGR codes if we don't write to a terminal
+    if not __import__("sys").stdout.isatty():
+        for _ in dir():
+            if isinstance(_, str) and _[0] != "_":
+                locals()[_] = ""
+    else:
+        # set Windows console in VT mode
+        if __import__("platform").system() == "Windows":
+            kernel32 = __import__("ctypes").windll.kernel32
+            kernel32.SetConsoleMode(kernel32.GetStdHandle(-11), 7)
+            del kernel32
+
+print("Generate github personal access token @ " + colors.LINK + "https://github.com/settings/tokens/new" + colors.END)
+name = prompt(colors.INFO + 'Your Name: '+colors.END +'\t')
+email = prompt(colors.INFO + 'Your Email: ' + colors.END + '\t')
+github_username = prompt(colors.INFO + 'GitHub Username: ' + colors.END + '\t')
+token = prompt(colors.INFO + 'GitHub API Token: ' + colors.END + '\t')
 
 d = {
 	"name": name,
