@@ -17,7 +17,7 @@ Plug 'tpope/vim-commentary'
 " Vim for ipython
 Plug 'jpalardy/vim-slime', { 'for': 'python' }
 Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
-let g:slime_target = "vim"
+let g:slime_target = "tmux"
 
 
 " netwr setup
