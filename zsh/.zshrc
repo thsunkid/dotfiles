@@ -101,3 +101,20 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# git alias
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit -m'
+alias gch='git checkout'
+alias gv='git commit -v'
+alias gm='git merge --no-ff'
+alias goops='git commit --amend --no-edit'
+
+# setup zsh highlight
+source /Users/thesunkid/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# setup neovim
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
