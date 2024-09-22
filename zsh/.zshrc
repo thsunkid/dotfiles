@@ -102,6 +102,23 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# setup zsh highlight
+source /Users/thesunkid/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# setup neovim
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+##### MACROS #####
+# nvim as vi
+alias vi='nvim'
+
+# check weather
+alias weather='curl wttr.in'
+
+
 # git alias
 alias ga='git add'
 alias gb='git branch'
@@ -111,10 +128,83 @@ alias gv='git commit -v'
 alias gm='git merge --no-ff'
 alias goops='git commit --amend --no-edit'
 
-# setup zsh highlight
-source /Users/thesunkid/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Kubectl command
+alias kc="kubectl"
+alias kce='f() { kubectl exec -it "$1" -- /bin/sh; }; f'
+alias kcgp="kubectl get pods"
+alias kcdp="kubectl describe pod"
 
-# setup neovim
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    #prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
+
+
+# Block site usage
+blocksite() {
+    local site="$1";
+    echo "127.0.0.1" $site | sudo tee -a /etc/hosts > /dev/null
+}
+
+close_tabs_with_domain() {
+    local browser="$1"
+    local domain="$2"
+
+    osascript -e "tell application \"$browser\"
+        repeat with w in windows
+            set tabList to (every tab of w whose URL contains \"$domain\")
+            repeat with t in tabList
+                close t
+            end repeat
+        end repeat
+    end tell"
+}
+
+
+tmpaccess() {
+    sudo sed -i "" "/$1/s/^/#/" /etc/hosts
+    echo "\n========================================================\n\e[38;5;107mGod granted you the sin to access $1 in $2 seconds\n              Be mindful of the time. ⏳  \e[0m\n========================================================\n"
+    (
+        sleep $2; sudo sed -i "" "/$1/s/^#//" /etc/hosts;
+        close_tabs_with_domain "Safari" $1;
+        close_tabs_with_domain "Google Chrome" $1;
+        close_tabs_with_domain "Brave Browser" $1;
+        echo "\n\033[0;33mEnough fun. Go back to work 🏋️‍♂️"
+    ) & disown;
+}
+
+# old habits :)
+alias top="btop"
+alias cat="bat"
+
+# Alias aichat
+alias gwern='aichat -m openai:gpt-4o -r gwern'
+alias rewriteo="aichat -m openai:gpt-4o -r rewrite 'rewrite this without altering original words while correcting the grammar: ' "
+alias format="aichat -m openai:gpt-4o -r gwern 'Reformat the following text extracted from pdf, dont rewrite: ' "
+alias rewrite="aichat -r rewrite"
+alias crewrite="aichat -m claude:claude-3-5-sonnet-20240620 -r rewrite"
+alias gwernc='aichat -m openai:gpt-4o -r gwern -s'
+alias cgwern='aichat -m claude:claude-3-5-sonnet-20240620 -r gwern'
+alias cgwernc='aichat -m claude:claude-3-5-sonnet-20240620 -r gwern -s'
+alias founder='aichat -r founder'
+alias chatjob='aichat -r job'
+alias cfe='aichat -m claude:claude-3-5-sonnet-20240620 -r fe -s'
+
+alias fix="aichat -e 'fix this: ' "
+# Alias pytest
+alias pytest='pytest -s -vv --disable-warnings'
+alias pytestn='pytest -s -vv --disable-warnings -n auto'
+
+scan_screen() {
+
+    local latest_file=$(find /Users/thesunkid/screencap -type f -print0 | xargs -0 stat -f "%m %N" | sort -rn | head -1 | cut -f2- -d" ")
+    local question=$1
+    
+    echo "Scanning the screencap '$latest_file' ..."
+    
+    aichat -r gwern -m openai:gpt-4o -s t1 --file "$latest_file" -- "$question"
+    
+}
+

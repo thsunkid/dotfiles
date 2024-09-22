@@ -1,0 +1,87 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "alt+1",
+    "command": "editor.action.peekDefinition",
+  },
+  {
+    "key": "alt+2",
+    "command": "-editor.action.peekTypeDefinition",
+  },
+  {
+    "key": "cmd+shift+d",
+    "command": "editor.action.peekImplementation",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "key": "cmd+down",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+up",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+j", "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "cmd+shift+k",
+    "command": "workbench.action.switchWindow"
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.openEditorAtIndex1"
+  },
+  {
+    "key": "cmd+2",
+    "command": "workbench.action.openEditorAtIndex2"
+  },
+  {
+    "key": "cmd+3",
+    "command": "workbench.action.openEditorAtIndex3"
+  },
+  {
+    "key": "cmd+4",
+    "command": "workbench.action.openEditorAtIndex4"
+  },
+  {
+    "key": "cmd+5",
+    "command": "workbench.action.openEditorAtIndex5"
+  },
+  {
+    "key": "cmd+6",
+    "command": "workbench.action.openEditorAtIndex6"
+  },
+  {
+    "key": "cmd+7",
+    "command": "workbench.action.openEditorAtIndex7"
+  },
+  {
+    "key": "cmd+8",
+    "command": "workbench.action.openEditorAtIndex8"
+  },
+  {
+    "key": "cmd+9",
+    "command": "workbench.action.openEditorAtIndex9"
+  },
+  {
+    "key": "alt+3",
+    "command": "editor.showTypeHierarchy"
+  },
+  {
+    "key": "alt+2",
+    "command": "editor.showCallHierarchy",
+    "when": "editorHasCallHierarchyProvider && editorTextFocus && !inReferenceSearchEditor"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "-editor.showCallHierarchy",
+    "when": "editorHasCallHierarchyProvider && editorTextFocus && !inReferenceSearchEditor"
+  }
+]

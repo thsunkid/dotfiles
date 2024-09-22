@@ -1,0 +1,134 @@
+{
+  "workbench.colorCustomizations": {
+    "[Monokai ST3]": {
+      "editor.selectionBackground": "#dfdddd2a",
+      "editor.background": "#282823",
+      "editor.selectionHighlightBorder": "#ffffff",
+      "editorCursor.foreground": "#f8f8f854",
+      "peekViewEditor.matchHighlightBackground": "#dfdddd2a"
+    }
+  },
+  "python.languageServer": "Pylance",
+  "ruff.lint.args": ["--ignore=C,R,W,F401,E731"],
+  "workbench.settings.editor": "json",
+  "css.validate": false,
+  "editor.fontSize": 12,
+  "editor.fontFamily": "'Martian Mono', 'SF Mono','Consolas',Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontWeight": "300",
+  "terminal.integrated.fontFamily": "Martian Mono",
+  "terminal.integrated.fontWeight": "350",
+  "terminal.integrated.fontSize": 12,
+  "editor.multiCursorModifier": false,
+  "editor.suggestSelection": "first",
+  "python.analysis.typeCheckingMode": "basic",
+  "C_Cpp.updateChannel": "Insiders",
+  "editor.accessibilitySupport": "off",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "editor.tabSize": 4,
+  "editor.cursorStyle": "line",
+  "editor.insertSpaces": false,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "python.defaultInterpreterPath": "/Users/thesunkid/miniconda3/bin/python",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "vscode-neovim.highlightGroups.highlights": {
+    "Directory": "vim",
+    "IncSearch": {
+      "backgroundColor": "theme.editor.findMatchBackground",
+      "borderColor": "theme.editor.findMatchBorder"
+    },
+    "Search": {
+      "backgroundColor": "theme.editor.findMatchHighlightBackground",
+      "borderColor": "theme.editor.findMatchHighlightBorder"
+    },
+    "Visual": {
+      "backgroundColor": "theme.editor.selectionBackground"
+    },
+    "Conceal": "vim",
+    "Substitute": "vim"
+  },
+  "vscode-neovim.logPath": "/Users/thesunkid/Downloads/nvim-macos/neovim.log",
+  "vscode-neovim.mouseSelectionStartVisualMode": true,
+  "vscode-neovim.neovimExecutablePaths.darwin": "/Users/thesunkid/Downloads/nvim-macos/bin/nvim",
+  "gitlens.views.commits.files.layout": "tree",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "sync.gist": "xla",
+  "files.associations": {
+    "*.tsx": "javascriptreact",
+    "*.ts": "typescriptreact",
+    "*.yml": "yaml"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": true,
+    "json": true,
+    "python": true
+  },
+  "npm.keybindingsChangedWarningShown": true,
+  "vscode-neovim.revealCursorScrollLine": true,
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "terminal.integrated.scrollback": 100000,
+  "git.suggestSmartCommit": false,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.confirmSync": false,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "workbench.activityBar.location": "hidden",
+  "workbench.colorTheme": "Monokai ST3",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": -1,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "terminal.integrated.inheritEnv": false,
+  "cursor.cpp.disabledLanguages": ["scminput"],
+  "gitlens.mode.active": "zen",
+  "editor.renderWhitespace": "none",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "vscode-neovim.compositeKeys": {},
+  "cmake.showOptionsMovedNotification": false,
+  "githubPullRequests.pullBranch": "never",
+  "cursor.cpp.enablePartialAccepts": true,
+  "diffEditor.renderSideBySide": false
+}
